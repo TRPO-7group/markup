@@ -114,7 +114,7 @@ body{
 }
 
 .list .list-elem .list-elem-name{
-    font-weight: bold;
+
 }
 
 .list .list-elem{
@@ -194,6 +194,20 @@ body{
     min-width: 100%;
     min-height: 100%;
     display: none;
+}
+
+
+.list-group .list-elem{
+    display: none;
+    margin-top: 15px;
+}
+
+.list-group > span{
+    font-weight: bold;
+    cursor: pointer;
+}
+.list-group{
+    margin-top: 10px;
 }
 
 
