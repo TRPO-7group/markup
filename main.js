@@ -24,12 +24,12 @@ $(document).on("click", ".list-group > span", function () {
 
 
 $(document).on("click", ".detail-statistic", function () {
-    if ($(".detail-commits-all").is(":visible"))
+    if ($(this).siblings(".detail-commits-all").is(":visible"))
     {
         $(this).find("span").html("[+]");
-        $(".detail-commits-all").hide(200);
+        $(this).siblings(".detail-commits-all").hide(200);
     } else {
         $(this).find("span").html("[-]");
-        $(".detail-commits-all").show(200);
+        $(this).siblings(".detail-commits-all").show(200);
     }
 })
