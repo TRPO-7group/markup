@@ -293,3 +293,8 @@ border: 1px solid #ccc;
         transform: rotate(140deg);
     }
 }
+
+
+.list-group .list-elem{
+    margin-left: 50px;
+}
