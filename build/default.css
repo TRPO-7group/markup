@@ -308,16 +308,17 @@ body {
 }
 
 .lk-container .reps-list .rep-list-add {
-  background: #3f51b5;
+  padding: 7px;
+  margin-left: 20px;
+  background-color: #3f51b5;
   border: none;
   color: white;
-  padding: 7px;
-  cursor: pointer;
-  margin-left: 20px;
+  text-align: center;
 }
 
 .lk-container .reps-list .rep-list-add:hover {
-  background: #00008B;
+  cursor: pointer;
+  background-color: #00008B;
 }
 
 .lk-container .reps-list .reps-list-elem {
@@ -332,6 +333,12 @@ body {
 .lk-container .reps-list .reps-list-elem .repos-list-elem-title {
   text-decoration: none;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lk-container .reps-list .reps-list-elem .repos-list-elem-title .repos-list-elem-title-name {
+  flex-grow: 2;
 }
 
 .lk-container .reps-list .reps-list-elem .repos-list-elem-title .repos-list-elem-title-name:hover {
@@ -339,16 +346,34 @@ body {
   cursor: pointer;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-title button {
+.lk-container .reps-list .reps-list-elem .repos-list-elem-title .repos-list-elem-title-invite {
   padding: 5px;
-  position: absolute;
-  right: 0;
+  font-size: 14px;
+  flex-grow: 1;
+  margin-left: 15px;
   background-color: #3f51b5;
   border: none;
   color: white;
+  text-align: center;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-title button:hover {
+.lk-container .reps-list .reps-list-elem .repos-list-elem-title .repos-list-elem-title-invite:hover {
+  cursor: pointer;
+  background-color: #00008B;
+}
+
+.lk-container .reps-list .reps-list-elem .repos-list-elem-title .repos-list-elem-title-delete {
+  padding: 5px;
+  font-size: 14px;
+  flex-grow: 1;
+  margin-left: 15px;
+  background-color: #3f51b5;
+  border: none;
+  color: white;
+  text-align: center;
+}
+
+.lk-container .reps-list .reps-list-elem .repos-list-elem-title .repos-list-elem-title-delete:hover {
   cursor: pointer;
   background-color: #00008B;
 }
@@ -366,9 +391,11 @@ body {
 .lk-container .reps-list .reps-list-elem .repos-list-elem-user .user-delete {
   display: none;
   margin-left: 20px;
+  padding: 3px;
   background-color: #3f51b5;
   border: none;
   color: white;
+  text-align: center;
 }
 
 .lk-container .reps-list .reps-list-elem .repos-list-elem-user .user-delete:hover {
@@ -391,16 +418,17 @@ body {
 }
 
 .lk-container .user-info .lk-submit-button button {
-  background: #3f51b5;
-  border: none;
   width: 100px;
   height: 30px;
-  cursor: pointer;
+  background-color: #3f51b5;
+  border: none;
   color: white;
+  text-align: center;
 }
 
 .lk-container .user-info .lk-submit-button button:hover {
-  background: #00008B;
+  cursor: pointer;
+  background-color: #00008B;
 }
 
 .lk-container .user-info .user-info-section {

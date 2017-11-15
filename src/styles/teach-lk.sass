@@ -17,14 +17,9 @@
       font-size: 14pt
       text-decoration-style: solid
     .rep-list-add
-      background: $menu_color
-      border: none
-      color: white
       padding: 7px
-      cursor: pointer
       margin-left: 20px
-      &:hover
-        background: #00008B
+      @include standart-button
 
     .reps-list-elem
       text-decoration: none
@@ -36,15 +31,26 @@
       .repos-list-elem-title
         text-decoration: none
         position: relative
+        display: flex
+        justify-content: space-between
 
         .repos-list-elem-title-name
+          flex-grow: 2
           &:hover
             color: #696969
             cursor: pointer
-        button
+        .repos-list-elem-title-invite
           padding: 5px
-          position: absolute
-          right: 0
+          font-size: 14px
+          flex-grow: 1
+          margin-left: 15px
+          @include standart-button
+
+        .repos-list-elem-title-delete
+          padding: 5px
+          font-size: 14px
+          flex-grow: 1
+          margin-left: 15px
           @include standart-button
 
       .repos-list-elem-user
@@ -58,6 +64,7 @@
         .user-delete
           display: none
           margin-left: 20px
+          padding: 3px
           @include standart-button
 
 
@@ -73,15 +80,10 @@
       margin-top: 15px
 
       button
-        background: $menu_color
-        border: none
         width: 100px
         height: 30px
-        cursor: pointer
-        color: white
+        @include standart-button
 
-        &:hover
-          background: #00008B
 
     .user-info-section
       margin-top: 15px
