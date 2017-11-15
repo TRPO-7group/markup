@@ -304,6 +304,7 @@ body {
 }
 
 .lk-container .reps-list {
+  position: relative;
   margin-top: 25px;
 }
 
@@ -314,8 +315,11 @@ body {
 
 .lk-container .reps-list .rep-list-add {
   padding: 5px;
+  height: 30px;
   margin-left: 20px;
   font-size: 14px;
+  position: absolute;
+  right: 0;
   background-color: #3f51b5;
   border: none;
   color: white;
