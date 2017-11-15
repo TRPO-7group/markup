@@ -36,7 +36,6 @@ $(document).on("click", ".detail-statistic", function () {
 
 
 $(document).on('click', ".reps-list-elem .repos-list-elem-title .repos-list-elem-title-name", function () {
-    console.log("log");
         if ($(this).closest(".reps-list-elem").find(".repos-list-elem-user").is(":visible"))
         {
             $(this).closest(".reps-list-elem").find("hr").css("opacity",0);
