@@ -326,6 +326,21 @@ body {
   margin-top: 15px;
 }
 
+.lk-container .reps-list .reps-list-elem .repos-list-elem-invite-all {
+  padding: 5px;
+  font-size: 14px;
+  display: none;
+  background-color: #3f51b5;
+  border: none;
+  color: white;
+  text-align: center;
+}
+
+.lk-container .reps-list .reps-list-elem .repos-list-elem-invite-all:hover {
+  cursor: pointer;
+  background-color: #00008B;
+}
+
 .lk-container .reps-list .reps-list-elem hr {
   opacity: 0;
 }
@@ -339,6 +354,7 @@ body {
 
 .lk-container .reps-list .reps-list-elem .repos-list-elem-title .repos-list-elem-title-name {
   flex-grow: 2;
+  flex-basis: 350px;
 }
 
 .lk-container .reps-list .reps-list-elem .repos-list-elem-title .repos-list-elem-title-name:hover {
@@ -351,6 +367,7 @@ body {
   font-size: 14px;
   flex-grow: 1;
   margin-left: 15px;
+  height: 20px;
   background-color: #3f51b5;
   border: none;
   color: white;
@@ -367,6 +384,7 @@ body {
   font-size: 14px;
   flex-grow: 1;
   margin-left: 15px;
+  height: 20px;
   background-color: #3f51b5;
   border: none;
   color: white;
@@ -465,5 +483,6 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 /*# sourceMappingURL=default.css.map */

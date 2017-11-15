@@ -41,9 +41,11 @@ $(document).on('click', ".reps-list-elem .repos-list-elem-title .repos-list-elem
         {
             $(this).closest(".reps-list-elem").find("hr").css("opacity",0);
             $(this).closest(".reps-list-elem").find(".repos-list-elem-user").hide(200);
+            $(this).closest(".reps-list-elem").find(".repos-list-elem-invite-all").hide(200);
         }
         else
         {   $(this).closest(".reps-list-elem").find("hr").css("opacity",1);
             $(this).closest(".reps-list-elem").find(".repos-list-elem-user").show(200);
+            $(this).closest(".reps-list-elem").find(".repos-list-elem-invite-all").show();
         }
 })
