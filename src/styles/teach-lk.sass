@@ -1,0 +1,111 @@
+.title-center
+  text-align: center
+  font-size: 8pt
+  margin-bottom: 25px
+
+
+.lk-container
+  display: flex
+  justify-content: flex-start
+  flex-wrap: wrap
+  max-width: 600px
+  margin: auto
+
+  .reps-list
+    margin-top: 25px
+    .rep-list-title
+      font-size: 14pt
+      text-decoration-style: solid
+    .rep-list-add
+      background: $menu_color
+      border: none
+      color: white
+      padding: 7px
+      cursor: pointer
+      margin-left: 20px
+      &:hover
+        background: #00008B
+
+    .reps-list-elem
+      text-decoration: none
+      margin-top: 15px
+
+      hr
+        opacity: 0
+
+      .repos-list-elem-title
+        text-decoration: none
+        position: relative
+
+        .repos-list-elem-title-name
+          &:hover
+            color: #696969
+            cursor: pointer
+        button
+          padding: 5px
+          position: absolute
+          right: 0
+          @include standart-button
+
+      .repos-list-elem-user
+        margin-top: 20px
+        margin-left: 30px
+        display: none
+
+        &:hover .user-delete
+          display: inline
+
+        .user-delete
+          display: none
+          margin-left: 20px
+          @include standart-button
+
+
+  .lk-load
+    display: inherit
+
+  .user-info
+    flex-basis: 350px
+    margin-right: 75px
+
+    .lk-submit-button
+      text-align: center
+      margin-top: 15px
+
+      button
+        background: $menu_color
+        border: none
+        width: 100px
+        height: 30px
+        cursor: pointer
+        color: white
+
+        &:hover
+          background: #00008B
+
+    .user-info-section
+      margin-top: 15px
+      .user-info-label
+        width: 100px
+        display: inline-block
+
+  .user-avatar
+    text-align: center
+
+    img
+      width: 150px
+      height: 150px
+
+    .user-avatar-uploader
+      display: block
+      position: relative
+      cursor: pointer
+      font-size: 9pt
+      &:hover
+        color: #696969
+
+      input[type=file]
+        opacity: 0
+        position: absolute
+        width: 100%
+        height: 100%
