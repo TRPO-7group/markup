@@ -21,6 +21,8 @@
     .rep-list-title
       font-size: 14pt
       text-decoration-style: solid
+      margin-bottom: 15px
+
     .rep-list-add
       padding: 5px
       height: 30px
@@ -77,16 +79,47 @@
         margin-top: 20px
         margin-left: 30px
         display: none
+        position: relative
 
-        &:hover .user-delete
-          display: inline
+        .repos-list-elem-user-date
+          margin-top: 10px
 
-        .user-delete
+        .repos-list-elem-user-menu-popup
+          position: absolute
+          z-index: 100
+          background-color: #e6e6e6
+          padding: 0 10px
+          border-radius: 10px
+          border: 1px solid #9d9d9d
           display: none
-          margin-left: 20px
-          padding: 3px
-          @include standart-button
 
+          ul
+            list-style: none
+            margin-left: -20px
+            line-height: 150%
+
+            a
+              text-decoration: none
+              color: black
+
+              &:hover
+                color: #9d9d9d
+
+
+
+        .repos-list-elem-user-menu-icon
+          width: 30px
+          height: 30px
+          vertical-align: bottom
+          margin-right: 15px
+          content: url("../../build/img/user-normal.png")
+          cursor: pointer
+
+          &.hovered
+            content: url("../../build/img/user-hover.png") !important
+
+          &:hover
+            content: url("../../build/img/user-hover.png")
 
   .lk-load
     display: inherit

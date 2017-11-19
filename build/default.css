@@ -1,12 +1,12 @@
 body {
-  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+  font-family: "helvetica", "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
 }
 
 .back {
   position: absolute;
   z-index: 5;
-  min-width: 100%;
-  min-height: 100%;
+  width: calc(100% - 20px);
+  height: 100%;
   display: none;
 }
 
@@ -311,6 +311,7 @@ body {
 .lk-container .reps-list .rep-list-title {
   font-size: 14pt;
   text-decoration-style: solid;
+  margin-bottom: 15px;
 }
 
 .lk-container .reps-list .rep-list-add {
@@ -410,25 +411,53 @@ body {
   margin-top: 20px;
   margin-left: 30px;
   display: none;
+  position: relative;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-user:hover .user-delete {
-  display: inline;
+.lk-container .reps-list .reps-list-elem .repos-list-elem-user .repos-list-elem-user-date {
+  margin-top: 10px;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-user .user-delete {
+.lk-container .reps-list .reps-list-elem .repos-list-elem-user .repos-list-elem-user-menu-popup {
+  position: absolute;
+  z-index: 100;
+  background-color: #e6e6e6;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid #9d9d9d;
   display: none;
-  margin-left: 20px;
-  padding: 3px;
-  background-color: #3f51b5;
-  border: none;
-  color: white;
-  text-align: center;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-user .user-delete:hover {
+.lk-container .reps-list .reps-list-elem .repos-list-elem-user .repos-list-elem-user-menu-popup ul {
+  list-style: none;
+  margin-left: -20px;
+  line-height: 150%;
+}
+
+.lk-container .reps-list .reps-list-elem .repos-list-elem-user .repos-list-elem-user-menu-popup ul a {
+  text-decoration: none;
+  color: black;
+}
+
+.lk-container .reps-list .reps-list-elem .repos-list-elem-user .repos-list-elem-user-menu-popup ul a:hover {
+  color: #9d9d9d;
+}
+
+.lk-container .reps-list .reps-list-elem .repos-list-elem-user .repos-list-elem-user-menu-icon {
+  width: 30px;
+  height: 30px;
+  vertical-align: bottom;
+  margin-right: 15px;
+  content: url("../build/img/user-normal.png");
   cursor: pointer;
-  background-color: #00008B;
+}
+
+.lk-container .reps-list .reps-list-elem .repos-list-elem-user .repos-list-elem-user-menu-icon.hovered {
+  content: url("../build/img/user-hover.png") !important;
+}
+
+.lk-container .reps-list .reps-list-elem .repos-list-elem-user .repos-list-elem-user-menu-icon:hover {
+  content: url("../build/img/user-hover.png");
 }
 
 .lk-container .lk-load {
