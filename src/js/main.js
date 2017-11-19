@@ -59,7 +59,6 @@ $(document).on("click", ".repos-list-elem-user-menu-icon", function () {
         $popup.fadeIn(200);
         $(this).addClass("hovered");
         $(".back").css("min-height", $("body").height() - $("header").height());
-        console.log($("body").height() - $("header").height());
         $(".back").show();
 
     }
@@ -80,6 +79,7 @@ $(document).on("change",".user-avatar-uploader input[type=file]", function (evt)
     // Only process image files.
     if (!f.type.match('image.*')) {
         alert("Image only please....");
+        return;
     }
     var reader = new FileReader();
     // Closure to capture the file information.
@@ -92,5 +92,4 @@ $(document).on("change",".user-avatar-uploader input[type=file]", function (evt)
     })(f);
     // Read in the image file as a data URL.
     reader.readAsDataURL(f);
-
 })
