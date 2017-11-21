@@ -118,7 +118,7 @@ $(document).on("keyup", "#user-find-autocomplete", function () {
 })
 
 $(document).on("click",".repos-list-elem-title-invite", function () {
-    $(".popup-user-find").show();
+    $(".popup-user-find").show().center();
     $(".popup-user-find").find(".popup-user-find-ok").prop("disabled", true);
     $(".popup-user-find").removeAttr("data-user");
     $(".popup-user-find").attr("data-rep",$(this).attr("data-id"));
@@ -152,4 +152,9 @@ $(document).on("click", ".popup-user-find-ok", function () {
     });
 
 });
+
+jQuery.fn.center = function () {
+
+    return this;
+}
 
