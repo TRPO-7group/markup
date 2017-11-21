@@ -142,5 +142,14 @@ $(document).on("click", ".popup-user-find-ok", function () {
             $(".back").click();
         }
     });
+
+    $.ajax({
+        type: "get",
+        async: false,
+        success: function (data) {
+            $(".reps-list").empty().append($(data).find(".reps-list"));
+        }
+    });
+
 });
 
