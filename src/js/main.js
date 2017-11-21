@@ -13,6 +13,7 @@ $(document).on("click", ".back", function () {
     $("#filter-popup").hide();
     $(".repos-list-elem-user-menu-icon.hovered").click();
     $(this).hide();
+    $(".js-popup").hide();
 })
 
 
@@ -37,17 +38,17 @@ $(document).on("click", ".detail-statistic", function () {
 
 
 $(document).on('click', ".reps-list-elem .repos-list-elem-title .repos-list-elem-title-name", function () {
-        if ($(this).closest(".reps-list-elem").find(".repos-list-elem-user").is(":visible"))
-        {
-            $(this).closest(".reps-list-elem").find("hr").css("opacity",0);
-            $(this).closest(".reps-list-elem").find(".repos-list-elem-user").hide(200);
-            $(this).closest(".reps-list-elem").find(".repos-list-elem-invite-all").hide(200);
-        }
-        else
-        {   $(this).closest(".reps-list-elem").find("hr").css("opacity",1);
-            $(this).closest(".reps-list-elem").find(".repos-list-elem-user").show(200);
-            $(this).closest(".reps-list-elem").find(".repos-list-elem-invite-all").show();
-        }
+    if ($(this).closest(".reps-list-elem").find(".repos-list-elem-user").is(":visible"))
+    {
+        $(this).closest(".reps-list-elem").find("hr").css("opacity",0);
+        $(this).closest(".reps-list-elem").find(".repos-list-elem-user").hide(200);
+        $(this).closest(".reps-list-elem").find(".repos-list-elem-invite-all").hide(200);
+    }
+    else
+    {   $(this).closest(".reps-list-elem").find("hr").css("opacity",1);
+        $(this).closest(".reps-list-elem").find(".repos-list-elem-user").show(200);
+        $(this).closest(".reps-list-elem").find(".repos-list-elem-invite-all").show();
+    }
 })
 
 
@@ -73,6 +74,7 @@ $(document).on("click", ".repos-list-elem-user-menu-icon", function () {
 
 
 
+
 $(document).on("change",".user-avatar-uploader input[type=file]", function (evt) {
     var file = evt.target.files; // FileList object
     var f = file[0];
@@ -87,9 +89,58 @@ $(document).on("change",".user-avatar-uploader input[type=file]", function (evt)
         return function(e) {
             // Render thumbnail.
             var elem = $("#user-avatar-loader");
-           $(elem).attr("src", e.target.result);
+            $(elem).attr("src", e.target.result);
         };
     })(f);
     // Read in the image file as a data URL.
     reader.readAsDataURL(f);
 })
+
+
+$(window).on("load",function () {
+
+
+    $( "#user-find-autocomplete" ).autocomplete({
+        source: "/reposit-catalog/ajax/users-list.php",
+        minLength: 2,
+        select: function( event, ui ) {
+            $(".popup-user-find").attr("data-user", ui.item.id);
+            $(".popup-user-find").find(".popup-user-find-ok").prop("disabled", false);
+        },
+        response: function( event, ui ) {
+            console.log(ui);
+        }
+    });
+});
+
+$(document).on("keyup", "#user-find-autocomplete", function () {
+    $(".popup-user-find").find(".popup-user-find-ok").prop("disabled", true);
+})
+
+$(document).on("click",".repos-list-elem-title-invite", function () {
+    $(".popup-user-find").show();
+    $(".popup-user-find").find(".popup-user-find-ok").prop("disabled", true);
+    $(".popup-user-find").removeAttr("data-user");
+    $(".popup-user-find").attr("data-rep",$(this).attr("data-id"));
+    $(".back").css("min-height", $("body").height() - $("header").height());
+    $(".back").show();
+})
+
+
+$(document).on("click", ".popup-user-find-ok", function () {
+    var $popup = $(this).closest(".popup-user-find");
+    var user = $popup.attr("data-user");
+    var rep = $popup.attr("data-rep");
+    if (!user)
+        return false;
+    $.ajax({
+        url: "/reposit-catalog/ajax/add-invite.php",
+        data: {rep_id: rep, user_id: user},
+        type: "get",
+        async: false,
+        success: function (data) {
+            $(".back").click();
+        }
+    });
+});
+

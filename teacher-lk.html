@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="WINDOWS-1251">
+    <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="build/default.css" type="text/css"/>
-    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
-    <script src="build/js/main.js"></script>
-</head>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
+
+</head>
 
 
 <header>
@@ -25,7 +25,7 @@
                     Teacher
                 </div>
                 <div class="user-info-profile">
-                    <a href="#">Профиль пользователя</a>
+                    <a href="#">РџСЂРѕС„РёР»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ</a>
                 </div>
             </div>
             <div class="header-user-logo">
@@ -34,8 +34,8 @@
         </div>
         <div class="header-bottom-section">
             <div class="header-menu">
-                <a href="#">Личные репозитории</a>
-                <a href="#">Учебные репозитории</a>
+                <a href="#">Р›РёС‡РЅС‹Рµ СЂРµРїРѕР·РёС‚РѕСЂРёРё</a>
+                <a href="#">РЈС‡РµР±РЅС‹Рµ СЂРµРїРѕР·РёС‚РѕСЂРёРё</a>
                 <img src="build/img/search.png" class="js-popup-search">
             </div>
         </div>
@@ -43,10 +43,20 @@
 </header>
 
 <div class="back"></div>
+<div class="popup-user-find js-popup">
+    <div class="popup-user-find-content">
+        <div class="user-find-input-container">
+        <input id="user-find-autocomplete">
+        </div>
+            <div class="popup-user-find-ok-container">
+            <button class="popup-user-find-ok">РћРљ</button>
+        </div>
+    </div>
+</div>
 
 <body>
 <div class="title-center">
-    <h1>Личный кабинет</h1>
+    <h1>Р›РёС‡РЅС‹Р№ РєР°Р±РёРЅРµС‚</h1>
 </div>
 
         <div class="lk-container">
@@ -56,142 +66,148 @@
 
     <div class="user-info-section">
         <label class="user-info-label">
-        ФИО:
+        Р¤РРћ:
         </label>
-        <input type="text" value="Иванов Иван Иванович" required>
+        <input type="text" value="РРІР°РЅРѕРІ РРІР°РЅ РРІР°РЅРѕРІРёС‡" required>
     </div>
     <div class="user-info-section">
         <label class="user-info-label">
-        Кафедра:
+        РљР°С„РµРґСЂР°:
         </label>
-        <input type="text" value="КСПТ" required>
+        <input type="text" value="РљРЎРџРў" required>
     </div>
     <div class="user-info-section">
         <label class="user-info-label">
-            Почта:
+            РџРѕС‡С‚Р°:
         </label>
         <input type="text" value="test@test.ru">
 
     </div>
     <div class="user-info-section">
         <label class="user-info-label">
-        Статус:
+        РЎС‚Р°С‚СѓСЃ:
         </label>
-            Учитель
+            РЈС‡РёС‚РµР»СЊ
     </div>
 
     <div class="lk-submit-button">
-        <button type="submit">Сохранить</button>
+        <button type="submit">РЎРѕС…СЂР°РЅРёС‚СЊ</button>
     </div>
 
 </div>
             <div class="user-avatar">
         <img src="build/img/blank-person-390x390.png" id="user-avatar-loader">
         <label class="user-avatar-uploader">
-            Загрузить новое фото
+            Р—Р°РіСЂСѓР·РёС‚СЊ РЅРѕРІРѕРµ С„РѕС‚Рѕ
             <input type="file">
         </label>
     </div>
                 </form>
 
             <div class="reps-list">
-                <span class="rep-list-title">Список учебных репозиториев</span>
-                <button class="rep-list-add">Добавить репозиторий</button>
+                <span class="rep-list-title">РЎРїРёСЃРѕРє СѓС‡РµР±РЅС‹С… СЂРµРїРѕР·РёС‚РѕСЂРёРµРІ</span>
+                <button class="rep-list-add">Р”РѕР±Р°РІРёС‚СЊ СЂРµРїРѕР·РёС‚РѕСЂРёР№</button>
                 <div class="reps-list-elem">
                     <div class="repos-list-elem-title">
-                        <div class="repos-list-elem-title-name">Репозиторий (2 новых запроса)</div>
-                        <div class="repos-list-elem-title-invite">Пригласить</div>
-                        <div class="repos-list-elem-title-delete">Удалить</div>
+                        <div class="repos-list-elem-title-name">Р РµРїРѕР·РёС‚РѕСЂРёР№ (2 РЅРѕРІС‹С… Р·Р°РїСЂРѕСЃР°)</div>
+                        <div class="repos-list-elem-title-invite" data-id="1">РџСЂРёРіР»Р°СЃРёС‚СЊ</div>
+                        <div class="repos-list-elem-title-delete">РЈРґР°Р»РёС‚СЊ</div>
                     </div>
-                    <button class="repos-list-elem-invite-all">Добавить всех</button>
+                    <button class="repos-list-elem-invite-all">Р”РѕР±Р°РІРёС‚СЊ РІСЃРµС…</button>
                     <div class="repos-list-elem-user">
                         <img class="repos-list-elem-user-menu-icon">
                         <div class="repos-list-elem-user-menu-popup">
                             <ul>
-                                <li><a href="#">Добавить</a>
-                                <li><a href="#">Профиль пользователя</a>
-                                <li><a href="#">На странице репозитория</a>
+                                <li><a href="#">Р”РѕР±Р°РІРёС‚СЊ</a>
+                                <li><a href="#">РџСЂРѕС„РёР»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ</a>
+                                <li><a href="#">РќР° СЃС‚СЂР°РЅРёС†Рµ СЂРµРїРѕР·РёС‚РѕСЂРёСЏ</a>
                             </ul>
 
                         </div>
-                        <a href="#" class="repos-list-elem-user-name">Вася</a>
+                        <a href="#" class="repos-list-elem-user-name">Р’Р°СЃСЏ</a>
                     </div>
 
                     <div class="repos-list-elem-user">
                         <img class="repos-list-elem-user-menu-icon">
                         <div class="repos-list-elem-user-menu-popup">
                             <ul>
-                                <li><a href="#">Добавить</a>
-                                <li><a href="#">Профиль пользователя</a>
-                                <li><a href="#">На странице репозитория</a>
+                                <li><a href="#">Р”РѕР±Р°РІРёС‚СЊ</a>
+                                <li><a href="#">РџСЂРѕС„РёР»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ</a>
+                                <li><a href="#">РќР° СЃС‚СЂР°РЅРёС†Рµ СЂРµРїРѕР·РёС‚РѕСЂРёСЏ</a>
                             </ul>
 
                         </div>
-                        <a href="#" class="repos-list-elem-user-name">Вася</a>
+                        <a href="#" class="repos-list-elem-user-name">Р’Р°СЃСЏ</a>
                     </div>
                     <hr>
                     <div class="repos-list-elem-user">
                         <img class="repos-list-elem-user-menu-icon">
                         <div class="repos-list-elem-user-menu-popup">
                             <ul>
-                                <li><a href="#">Добавить</a>
-                                <li><a href="#">Профиль пользователя</a>
-                                <li><a href="#">На странице репозитория</a>
+                                <li><a href="#">Р”РѕР±Р°РІРёС‚СЊ</a>
+                                <li><a href="#">РџСЂРѕС„РёР»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ</a>
+                                <li><a href="#">РќР° СЃС‚СЂР°РЅРёС†Рµ СЂРµРїРѕР·РёС‚РѕСЂРёСЏ</a>
                             </ul>
 
                         </div>
-                        <a href="#" class="repos-list-elem-user-name">Вася</a>
-                        <div class="repos-list-elem-user-date">Последнее обновление: 11.11.1970</div>
+                        <a href="#" class="repos-list-elem-user-name">Р’Р°СЃСЏ</a>
+                        <div class="repos-list-elem-user-date">РџРѕСЃР»РµРґРЅРµРµ РѕР±РЅРѕРІР»РµРЅРёРµ: 11.11.1970</div>
                     </div>
                     <div class="repos-list-elem-user">
                         <img class="repos-list-elem-user-menu-icon">
                         <div class="repos-list-elem-user-menu-popup">
                             <ul>
-                                <li><a href="#">Добавить</a>
-                                <li><a href="#">Профиль пользователя</a>
-                                <li><a href="#">На странице репозитория</a>
+                                <li><a href="#">Р”РѕР±Р°РІРёС‚СЊ</a>
+                                <li><a href="#">РџСЂРѕС„РёР»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ</a>
+                                <li><a href="#">РќР° СЃС‚СЂР°РЅРёС†Рµ СЂРµРїРѕР·РёС‚РѕСЂРёСЏ</a>
                             </ul>
 
                         </div>
-                        <a href="#" class="repos-list-elem-user-name">Петя</a>
-                        <div class="repos-list-elem-user-date">Последнее обновление: 11.11.1970</div>
+                        <a href="#" class="repos-list-elem-user-name">РџРµС‚СЏ</a>
+                        <div class="repos-list-elem-user-date">РџРѕСЃР»РµРґРЅРµРµ РѕР±РЅРѕРІР»РµРЅРёРµ: 11.11.1970</div>
                     </div>
                 </div>
                 <div class="reps-list-elem">
                     <div class="repos-list-elem-title">
-                        <div class="repos-list-elem-title-name">Репозиторий (2 новых запроса)</div>
-                        <div class="repos-list-elem-title-invite">Пригласить</div>
-                        <div class="repos-list-elem-title-delete">Удалить</div>
+                        <div class="repos-list-elem-title-name">Р РµРїРѕР·РёС‚РѕСЂРёР№ (2 РЅРѕРІС‹С… Р·Р°РїСЂРѕСЃР°)</div>
+                        <div class="repos-list-elem-title-invite" data-id="2">РџСЂРёРіР»Р°СЃРёС‚СЊ</div>
+                        <div class="repos-list-elem-title-delete">РЈРґР°Р»РёС‚СЊ</div>
                     </div>
                     <div class="repos-list-elem-user">
                         <img class="repos-list-elem-user-menu-icon">
                         <div class="repos-list-elem-user-menu-popup">
                             <ul>
-                                <li><a href="#">Добавить</a>
-                                <li><a href="#">Профиль пользователя</a>
-                                <li><a href="#">На странице репозитория</a>
+                                <li><a href="#">Р”РѕР±Р°РІРёС‚СЊ</a>
+                                <li><a href="#">РџСЂРѕС„РёР»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ</a>
+                                <li><a href="#">РќР° СЃС‚СЂР°РЅРёС†Рµ СЂРµРїРѕР·РёС‚РѕСЂРёСЏ</a>
                             </ul>
 
                         </div>
-                        <a href="#" class="repos-list-elem-user-name">Вася</a>
-                        <div class="repos-list-elem-user-date">Последнее обновление: 11.11.1970</div>
+                        <a href="#" class="repos-list-elem-user-name">Р’Р°СЃСЏ</a>
+                        <div class="repos-list-elem-user-date">РџРѕСЃР»РµРґРЅРµРµ РѕР±РЅРѕРІР»РµРЅРёРµ: 11.11.1970</div>
                     </div>
                     <div class="repos-list-elem-user">
                         <img class="repos-list-elem-user-menu-icon">
                         <div class="repos-list-elem-user-menu-popup">
                             <ul>
-                                <li><a href="#">Добавить</a>
-                                <li><a href="#">Профиль пользователя</a>
-                                <li><a href="#">На странице репозитория</a>
+                                <li><a href="#">Р”РѕР±Р°РІРёС‚СЊ</a>
+                                <li><a href="#">РџСЂРѕС„РёР»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ</a>
+                                <li><a href="#">РќР° СЃС‚СЂР°РЅРёС†Рµ СЂРµРїРѕР·РёС‚РѕСЂРёСЏ</a>
                             </ul>
 
                         </div>
-                        <a href="#" class="repos-list-elem-user-name">Петя</a>
-                        <div class="repos-list-elem-user-date">Последнее обновление: 11.11.1970</div>
+                        <a href="#" class="repos-list-elem-user-name">РџРµС‚СЏ</a>
+                        <div class="repos-list-elem-user-date">РџРѕСЃР»РµРґРЅРµРµ РѕР±РЅРѕРІР»РµРЅРёРµ: 11.11.1970</div>
                     </div>
                 </div>
             </div>
         </div>
 
 </body>
+
+<script src="build/js/jquery.js"></script>
+
+<script src="build/js/jquery-ui.js"></script>
+
+<script src="build/js/main.js"></script>
 </html>
