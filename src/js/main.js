@@ -121,7 +121,7 @@ $(document).on("click",".repos-list-elem-title-invite", function () {
     $(".popup-user-find").show().center();
     $(".popup-user-find").find(".popup-user-find-ok").prop("disabled", true);
     $(".popup-user-find").removeAttr("data-user");
-    $(".popup-user-find").attr("data-rep",$(this).attr("data-id"));
+    $(".popup-user-find").attr("data-rep",$(this).closest(".reps-list-elem").attr("data-id"));
     $(".back").css("min-height", $("body").height() - $("header").height());
     $(".back").show();
 })
@@ -157,4 +157,21 @@ jQuery.fn.center = function () {
 
     return this;
 }
+
+
+$(document).on("click", ".repos-list-elem-title-delete", function () {
+    var rep = $(this).closest(".reps-list-elem").attr("data-id");
+    var currBlock = $(this).closest(".reps-list-elem");
+    if (confirm("Удалить репозиторий? ")) {
+        $.ajax({
+            url: "/reposit-catalog/ajax/delete-reposit.php",
+            data: {rep_id: rep},
+            type: "get",
+            async: false,
+            success: function (data) {
+                currBlock.remove();
+            }
+        });
+    }
+})
 
