@@ -2,6 +2,10 @@ body {
   font-family: "helvetica", "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
 }
 
+body.scroll-hidden {
+  overflow: hidden;
+}
+
 .back {
   position: absolute;
   z-index: 5;
@@ -237,7 +241,7 @@ body {
   display: block;
   background-color: #3f51b5;
   pointer-events: none;
-  opacity: 1;
+  position: fixed;
 }
 
 .loader.back {
