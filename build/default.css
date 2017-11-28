@@ -237,6 +237,11 @@ body {
   display: block;
   background-color: #3f51b5;
   pointer-events: none;
+  opacity: 1;
+}
+
+.loader.back {
+  filter: none;
 }
 
 #loader {
