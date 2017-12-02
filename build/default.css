@@ -93,7 +93,7 @@ body.scroll-hidden {
   color: black;
 }
 
-.list .list-elem .list-elem-name:hover {
+.list .list-elem .list-elem-name a:hover {
   color: #696969;
 }
 
@@ -168,6 +168,25 @@ body.scroll-hidden {
   margin-right: 50px;
 }
 
+.header-section .header-user a {
+  text-decoration: underline;
+  color: white;
+}
+
+.header-section .header-user.authorize-link {
+  margin-top: 50px;
+}
+
+.header-section .header-user.authorize-link a {
+  color: white;
+  text-decoration: none;
+}
+
+.header-section .header-user.authorize-link a:hover {
+  cursor: pointer;
+  color: #9d9d9d;
+}
+
 .header-section .header-user .header-user-logo img {
   height: 75px;
   width: 75px;
@@ -187,11 +206,6 @@ body.scroll-hidden {
 
 .header-section .header-user .header-user-info .user-info-profile {
   margin-top: 10px;
-}
-
-.header-section .header-user .header-user-info .user-info-profile a {
-  text-decoration: underline;
-  color: white;
 }
 
 .header-section .header-logo {

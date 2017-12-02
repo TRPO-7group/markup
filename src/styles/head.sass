@@ -23,6 +23,19 @@
     float: right
     margin-right: 50px
 
+    a
+      text-decoration: underline
+      color: white
+
+    &.authorize-link
+      margin-top: 50px
+      a
+        color: white
+        text-decoration: none
+        &:hover
+          cursor: pointer
+          color: #9d9d9d
+
     .header-user-logo
       img
         height: 75px
@@ -41,10 +54,6 @@
 
       .user-info-profile
         margin-top: 10px
-
-        a
-          text-decoration: underline
-          color: white
 
   .header-logo
     margin-left: 50px
