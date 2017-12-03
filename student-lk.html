@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="build/default.css" type="text/css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+</head>
+
+
+<header>
+    <div class="header-section">
+
+        <div class="header-logo">
+            <img src="build/img/Git-Icon-White.png">
+        </div>
+        <div class="header-user">
+            <div class="header-user-info">
+                <div class="user-info-name">
+                    Ivanov Ivan
+                </div>
+                <div class="user-info-position">
+                    Student
+                </div>
+                <div class="user-info-profile">
+                    <a href="#">Профиль пользователя</a>
+                </div>
+            </div>
+            <div class="header-user-logo">
+                <img src="build/img/blank-person-390x390.png">
+            </div>
+        </div>
+        <div class="header-bottom-section">
+            <div class="header-menu">
+                <a href="#">Личные репозитории</a>
+                <a href="#">Учебные репозитории</a>
+                <img src="build/img/search.png" class="js-popup-search">
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="back"></div>
+<div class="popup-user-find js-popup">
+    <div class="popup-user-find-content">
+        <div class="user-find-input-container">
+        <input id="user-find-autocomplete">
+        </div>
+            <div class="popup-user-find-ok-container">
+            <button class="popup-user-find-ok">ОК</button>
+        </div>
+    </div>
+</div>
+
+<body>
+<div class="title-center">
+    <h1>Личный кабинет</h1>
+</div>
+
+        <div class="lk-container">
+
+                <form class="lk-load">
+            <div class="user-info">
+
+    <div class="user-info-section">
+        <label class="user-info-label">
+        ФИО:
+        </label>
+        <input type="text" value="Иванов Иван Иванович" required>
+    </div>
+    <div class="user-info-section">
+        <label class="user-info-label">
+        Группа:
+        </label>
+		<ul class="menu">
+			<li class="menu-item">
+				<a href="#">выберете группу</a>
+				<ul class="submenu">
+					<li class="submenu-item"><a href="#">13541/1</a></li>
+					<li class="submenu-item"><a href="#">13541/2</a></li>
+					<li class="submenu-item"><a href="#">13541/3</a></li>
+				</ul>
+		    </li>
+		</ul>
+    </div>
+    <div class="user-info-section">
+        <label class="user-info-label">
+            Почта:
+        </label>
+        <input type="text" value="test@test.ru">
+
+    </div>
+    <div class="user-info-section">
+        <label class="user-info-label">
+        Статус:
+        </label>
+            Ученик
+    </div>
+
+    <div class="lk-submit-button">
+        <button type="submit">Сохранить</button>
+    </div>
+
+</div>
+            <div class="user-avatar">
+        <img src="build/img/blank-person-390x390.png" id="user-avatar-loader">
+        <label class="user-avatar-uploader">
+            Загрузить новое фото
+            <input type="file">
+        </label>
+    </div>
+                </form>
+
+            <div class="reps-list">
+                <span class="rep-list-title">Список репозиториев в которых вы состоите:</span>
+                <button class="rep-list-add">Добавить репозиторий</button>
+                <div class="reps-list-elem">
+                    <div class="repos-list-elem-title">
+                        <div class="repos-list-elem-title-name">Проект 1</div>
+                        <div class="repos-list-elem-title-delete">Удалить</div>
+                    </div>
+					<br>
+                    <div class="repos-list-elem-title">
+                        <div class="repos-list-elem-title-name">Проект 2</div>
+                        <div class="repos-list-elem-title-delete">Удалить</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+<script src="build/js/jquery.js"></script>
+
+<script src="build/js/jquery-ui.js"></script>
+
+<script src="build/js/main.js"></script>
+</html>
