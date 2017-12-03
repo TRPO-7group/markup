@@ -97,25 +97,7 @@ $(document).on("change",".user-avatar-uploader input[type=file]", function (evt)
 })
 
 
-$(window).on("load",function () {
 
-
-    $( "#user-find-autocomplete" ).autocomplete({
-        source: "/reposit-catalog/ajax/users-list.php",
-        minLength: 2,
-        select: function( event, ui ) {
-            $(".popup-user-find").attr("data-user", ui.item.id);
-            $(".popup-user-find").find(".popup-user-find-ok").prop("disabled", false);
-        },
-        response: function( event, ui ) {
-            console.log(ui);
-        }
-    });
-});
-
-$(document).on("keyup", "#user-find-autocomplete", function () {
-    $(".popup-user-find").find(".popup-user-find-ok").prop("disabled", true);
-})
 
 $(document).on("click",".repos-list-elem-title-invite", function () {
     $(".popup-user-find").show().center();
@@ -127,31 +109,6 @@ $(document).on("click",".repos-list-elem-title-invite", function () {
 })
 
 
-$(document).on("click", ".popup-user-find-ok", function () {
-    var $popup = $(this).closest(".popup-user-find");
-    var user = $popup.attr("data-user");
-    var rep = $popup.attr("data-rep");
-    if (!user)
-        return false;
-    $.ajax({
-        url: "/reposit-catalog/ajax/add-invite.php",
-        data: {rep_id: rep, user_id: user},
-        type: "get",
-        async: false,
-        success: function (data) {
-            $(".back").click();
-        }
-    });
-
-    $.ajax({
-        type: "get",
-        async: false,
-        success: function (data) {
-            $(".reps-list").empty().append($(data).find(".reps-list"));
-        }
-    });
-
-});
 
 jQuery.fn.center = function () {
 
@@ -159,19 +116,5 @@ jQuery.fn.center = function () {
 }
 
 
-$(document).on("click", ".repos-list-elem-title-delete", function () {
-    var rep = $(this).closest(".reps-list-elem").attr("data-id");
-    var currBlock = $(this).closest(".reps-list-elem");
-    if (confirm("Удалить репозиторий? ")) {
-        $.ajax({
-            url: "/reposit-catalog/ajax/delete-reposit.php",
-            data: {rep_id: rep},
-            type: "get",
-            async: false,
-            success: function (data) {
-                currBlock.remove();
-            }
-        });
-    }
-})
+
 
