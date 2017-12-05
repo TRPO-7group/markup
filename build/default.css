@@ -404,7 +404,17 @@ body.scroll-hidden {
   margin-top: 15px;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-invite-all {
+.lk-container .reps-list .rep-list-lk-student-elem {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.lk-container .reps-list .rep-list-lk-student-elem .standart-button {
+  padding: 3px;
+}
+
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-invite-all {
   padding: 5px;
   font-size: 14px;
   display: none;
@@ -414,33 +424,33 @@ body.scroll-hidden {
   text-align: center;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-invite-all:hover {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-invite-all:hover {
   cursor: pointer;
   background-color: #00008B;
 }
 
-.lk-container .reps-list .reps-list-elem hr {
+.lk-container .reps-list .rep-list-lk-student-elem hr {
   opacity: 0;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-title {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-title {
   text-decoration: none;
   position: relative;
   display: flex;
   justify-content: space-between;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-title .repos-list-elem-title-name {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-title .repos-list-elem-title-name {
   flex-grow: 2;
   flex-basis: 350px;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-title .repos-list-elem-title-name:hover {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-title .repos-list-elem-title-name:hover {
   color: #696969;
   cursor: pointer;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-title .repos-list-elem-title-invite {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-title .repos-list-elem-title-invite {
   padding: 5px;
   font-size: 14px;
   flex-grow: 1;
@@ -452,12 +462,12 @@ body.scroll-hidden {
   text-align: center;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-title .repos-list-elem-title-invite:hover {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-title .repos-list-elem-title-invite:hover {
   cursor: pointer;
   background-color: #00008B;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-title .repos-list-elem-title-delete {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-title .repos-list-elem-title-delete {
   padding: 5px;
   font-size: 14px;
   flex-grow: 1;
@@ -469,23 +479,23 @@ body.scroll-hidden {
   text-align: center;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-title .repos-list-elem-title-delete:hover {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-title .repos-list-elem-title-delete:hover {
   cursor: pointer;
   background-color: #00008B;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-user {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-user {
   margin-top: 20px;
   margin-left: 30px;
   display: none;
   position: relative;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-user .repos-list-elem-user-date {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-user .repos-list-elem-user-date {
   margin-top: 10px;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-user .repos-list-elem-user-menu-popup {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-user .repos-list-elem-user-menu-popup {
   position: absolute;
   z-index: 100;
   background-color: #e6e6e6;
@@ -495,22 +505,22 @@ body.scroll-hidden {
   display: none;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-user .repos-list-elem-user-menu-popup ul {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-user .repos-list-elem-user-menu-popup ul {
   list-style: none;
   margin-left: -20px;
   line-height: 150%;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-user .repos-list-elem-user-menu-popup ul a {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-user .repos-list-elem-user-menu-popup ul a {
   text-decoration: none;
   color: black;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-user .repos-list-elem-user-menu-popup ul a:hover {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-user .repos-list-elem-user-menu-popup ul a:hover {
   color: #9d9d9d;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-user .repos-list-elem-user-menu-icon {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-user .repos-list-elem-user-menu-icon {
   width: 30px;
   height: 30px;
   vertical-align: bottom;
@@ -519,11 +529,11 @@ body.scroll-hidden {
   cursor: pointer;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-user .repos-list-elem-user-menu-icon.hovered {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-user .repos-list-elem-user-menu-icon.hovered {
   content: url("../build/img/user-hover.png") !important;
 }
 
-.lk-container .reps-list .reps-list-elem .repos-list-elem-user .repos-list-elem-user-menu-icon:hover {
+.lk-container .reps-list .rep-list-lk-student-elem .repos-list-elem-user .repos-list-elem-user-menu-icon:hover {
   content: url("../build/img/user-hover.png");
 }
 
