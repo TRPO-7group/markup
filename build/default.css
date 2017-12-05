@@ -16,6 +16,10 @@ body.scroll-hidden {
   background-color: #e6e6e6;
 }
 
+.dialog-form {
+  display: none;
+}
+
 .dialog-form input {
   width: 95%;
   margin-bottom: 15px;
