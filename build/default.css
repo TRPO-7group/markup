@@ -16,6 +16,27 @@ body.scroll-hidden {
   background-color: #e6e6e6;
 }
 
+.dialog-form input {
+  width: 95%;
+}
+
+.dialog-form textarea {
+  width: 95%;
+  height: 100px;
+}
+
+.standart-button {
+  background-color: #3f51b5;
+  border: none;
+  color: white;
+  text-align: center;
+}
+
+.standart-button:hover {
+  cursor: pointer;
+  background-color: #00008B;
+}
+
 .detail-container {
   margin-left: 50px;
 }
@@ -73,6 +94,16 @@ body.scroll-hidden {
 .list {
   margin-left: 50px;
   margin-right: 50px;
+}
+
+.list .all {
+  display: flex;
+  flex-direction: row;
+}
+
+.list .all .standart-button {
+  padding: 3px;
+  margin-left: 20px;
 }
 
 .list .list-elem {
