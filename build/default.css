@@ -18,11 +18,18 @@ body.scroll-hidden {
 
 .dialog-form input {
   width: 95%;
+  margin-bottom: 15px;
 }
 
 .dialog-form textarea {
   width: 95%;
   height: 100px;
+  margin-bottom: 15px;
+}
+
+.dialog-form select {
+  width: 95%;
+  margin-bottom: 15px;
 }
 
 .standart-button {
