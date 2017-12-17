@@ -216,7 +216,12 @@ body.scroll-hidden {
 }
 
 .header-section .header-user.authorize-link {
-  margin-top: 50px;
+  margin-top: 30px;
+}
+
+.header-section .header-user.authorize-link > div {
+  display: block;
+  margin-top: 5px;
 }
 
 .header-section .header-user.authorize-link a {
