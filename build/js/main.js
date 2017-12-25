@@ -26,13 +26,15 @@ $(document).on("click", ".list-group > span", function () {
 
 
 $(document).on("click", ".detail-statistic", function () {
-    if ($(this).closest(".detail-container").find(".detail-commits-all").is(":visible"))
+    if ($(this).closest(".detail-container").find(".tabs").is(":visible"))
     {
         $(this).find("span").html("[+]");
-        $(this).closest(".detail-container").find(".detail-commits-all").hide(200);
+        $(this).closest(".detail-container").find(".tabs").hide(200);
+        $(this).closest(".detail-container").find(".demo-example").hide(200);
     } else {
         $(this).find("span").html("[-]");
-        $(this).closest(".detail-container").find(".detail-commits-all").show(200);
+        $(this).closest(".detail-container").find(".tabs").show(200);
+        $(this).closest(".detail-container").find(".demo-example").show(200);
     }
 })
 
@@ -73,6 +75,11 @@ $(document).on("click", ".repos-list-elem-user-menu-icon", function () {
 })
 
 
+$(document).on("click",".repos-list-elem-title-invite", function () {
+    $(".popup-user-find").show();
+    $(".back").css("min-height", $("body").height() - $("header").height());
+    $(".back").show();
+})
 
 
 $(document).on("change",".user-avatar-uploader input[type=file]", function (evt) {
@@ -97,24 +104,34 @@ $(document).on("change",".user-avatar-uploader input[type=file]", function (evt)
 })
 
 
+$(window).on("load",function () {
 
 
-$(document).on("click",".repos-list-elem-title-invite", function () {
-    $(".popup-user-find").show().center();
-    $(".popup-user-find").find(".popup-user-find-ok").prop("disabled", true);
-    $(".popup-user-find").removeAttr("data-user");
-    $(".popup-user-find").attr("data-rep",$(this).closest(".reps-list-elem").attr("data-id"));
-    $(".back").css("min-height", $("body").height() - $("header").height());
-    $(".back").show();
+        $( function() {
+            function log( message ) {
+                console.log("message");
+            }
+
+            $( "#user-find-autocomplete" ).autocomplete({
+                source: function( request, response ) {
+                    $.ajax( {
+                        url: "/reposit-catalog/ajax/users-list.php",
+                        dataType: "jsonp",
+                        data: {
+                            term: request.term
+                        },
+                        success: function( data ) {
+                            response( data );
+                        }
+                    } );
+                },
+                minLength: 2,
+                select: function( event, ui ) {
+                    log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+                }
+            } );
+        } );
+
 })
-
-
-
-jQuery.fn.center = function () {
-
-    return this;
-}
-
-
 
 

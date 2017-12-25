@@ -26,13 +26,15 @@ $(document).on("click", ".list-group > span", function () {
 
 
 $(document).on("click", ".detail-statistic", function () {
-    if ($(this).closest(".detail-container").find(".detail-commits-all").is(":visible"))
+    if ($(this).closest(".detail-container").find(".tabs").is(":visible"))
     {
         $(this).find("span").html("[+]");
-        $(this).closest(".detail-container").find(".detail-commits-all").hide(200);
+        $(this).closest(".detail-container").find(".tabs").hide(200);
+        $(this).closest(".detail-container").find(".demo-example").hide(200);
     } else {
         $(this).find("span").html("[-]");
-        $(this).closest(".detail-container").find(".detail-commits-all").show(200);
+        $(this).closest(".detail-container").find(".tabs").show(200);
+        $(this).closest(".detail-container").find(".demo-example").show(200);
     }
 })
 
